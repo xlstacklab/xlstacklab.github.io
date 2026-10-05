@@ -367,7 +367,7 @@ const publications = [
     year: 2026,
     citations: true,
     citationFile: "./citations/0cal.bib",
-    selected: false,
+    selected: true,
     image: "./Figure/0cal.png",
     area: ["Multimodal Sensing & ISAC", "NextG Wireless & Networked Systems", "IoT, Edge Intelligence & CPS"],
     links: [
@@ -398,7 +398,7 @@ const publications = [
     year: 2025,
     citations: null,
     citationFile: "./citations/ojrc.bib",
-    selected: false,
+    selected: true,
     image: "./Figure/ojrc.png",
     area: ["Multimodal Sensing & ISAC", "NextG Wireless & Networked Systems", "IoT, Edge Intelligence & CPS"],
     links: [
@@ -468,7 +468,7 @@ const publications = [
     year: 2023,
     citations: null,
     citationFile: "./citations/lightthief.bib",
-    selected: false,
+    selected: true,
     image: "./Figure/LightThief.png",
     area: ["Trustworthy AI, Sensing & Security", "IoT, Edge Intelligence & CPS"],
     links: [
@@ -518,7 +518,7 @@ const publications = [
     year: 2021,
     citations: null,
     citationFile: "./citations/tscatter.bib",
-    selected: false,
+    selected: true,
     image: "./Figure/TScatter.png",
     area: ["Battery-Free & Sustainable IoT", "NextG Wireless & Networked Systems"],
     links: [
@@ -546,7 +546,7 @@ const publications = [
     year: 2020,
     citations: null,
     citationFile: "./citations/vmscatter.bib",
-    selected: false,
+    selected: true,
     image: "./Figure/VMscatter.png",
     area: ["Battery-Free & Sustainable IoT", "NextG Wireless & Networked Systems"],
     links: [
@@ -563,7 +563,7 @@ const publications = [
     year: 2020,
     citations: null,
     citationFile: "./citations/lscatter.bib",
-    selected: false,
+    selected: true,
     image: "./Figure/LScatter.png",
     area: ["Battery-Free & Sustainable IoT", "NextG Wireless & Networked Systems"],
   },
@@ -837,8 +837,21 @@ function getAreas(pub) {
   return Array.isArray(pub.area) ? pub.area : [pub.area];
 }
 
+// Preprints (arXiv) always sort after published work, in every view.
+function isPreprint(pub) {
+  return pub.preprint === true || /^arxiv\b/i.test(String(pub.venue || "").trim());
+}
+
+function preprintDelta(a, b) {
+  return Number(isPreprint(a)) - Number(isPreprint(b));
+}
+
 function sortByYearDesc(items) {
   return [...items].sort((a, b) => {
+    const preprintOrder = preprintDelta(a, b);
+    if (preprintOrder !== 0) {
+      return preprintOrder;
+    }
     const yearDelta = b.year - a.year;
     if (yearDelta !== 0) {
       return yearDelta;
@@ -853,6 +866,10 @@ function getCitationCount(pub) {
 
 function sortByCitationsDesc(items) {
   return [...items].sort((a, b) => {
+    const preprintOrder = preprintDelta(a, b);
+    if (preprintOrder !== 0) {
+      return preprintOrder;
+    }
     const citationDelta = getCitationCount(b) - getCitationCount(a);
     if (citationDelta !== 0) {
       return citationDelta;
