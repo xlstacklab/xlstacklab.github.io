@@ -235,7 +235,7 @@ const publications = [
     image: "./Figure/BFMScan.png",
     area: ["Multimodal Sensing & ISAC", "IoT, Edge Intelligence & CPS"],
     links: [
-      { label: "Code / Dataset: to appear", href: "" }
+      { label: "Code / Dataset", href: "https://github.com/xinliulab/26UbiComp_BFMScan" }
     ]
   },
 
@@ -247,7 +247,7 @@ const publications = [
     year: 2026,
     citations: null,
     citationFile: "",
-    selected: true,
+    selected: false,
     image: "./Figure/mugen.jpg",
     area: ["Physical AI & Human-Centered Intelligence", "Foundation Models & Generative AI"],
     links: [
@@ -309,7 +309,7 @@ const publications = [
     year: 2026,
     citations: true,
     citationFile: "./citations/hyperedit.bib",
-    selected: null,
+    selected: false,
     image: "./Figure/HyperEdit.jpeg",
     area: ["Foundation Models & Generative AI"]
   },
@@ -322,7 +322,7 @@ const publications = [
     year: 2026,
     citations: true,
     citationFile: "./citations/hydrochirp.bib",
-    selected: null,
+    selected: false,
     image: "./Figure/hydrochirp.png",
     area: ["NextG Wireless & Networked Systems"]
   },
@@ -367,7 +367,7 @@ const publications = [
     year: 2026,
     citations: true,
     citationFile: "./citations/0cal.bib",
-    selected: true,
+    selected: false,
     image: "./Figure/0cal.png",
     area: ["Multimodal Sensing & ISAC", "NextG Wireless & Networked Systems", "IoT, Edge Intelligence & CPS"],
     links: [
@@ -398,7 +398,7 @@ const publications = [
     year: 2025,
     citations: null,
     citationFile: "./citations/ojrc.bib",
-    selected: true,
+    selected: false,
     image: "./Figure/ojrc.png",
     area: ["Multimodal Sensing & ISAC", "NextG Wireless & Networked Systems", "IoT, Edge Intelligence & CPS"],
     links: [
@@ -468,7 +468,7 @@ const publications = [
     year: 2023,
     citations: null,
     citationFile: "./citations/lightthief.bib",
-    selected: true,
+    selected: false,
     image: "./Figure/LightThief.png",
     area: ["Trustworthy AI, Sensing & Security", "IoT, Edge Intelligence & CPS"],
     links: [
@@ -518,7 +518,7 @@ const publications = [
     year: 2021,
     citations: null,
     citationFile: "./citations/tscatter.bib",
-    selected: true,
+    selected: false,
     image: "./Figure/TScatter.png",
     area: ["Battery-Free & Sustainable IoT", "NextG Wireless & Networked Systems"],
     links: [
@@ -546,7 +546,7 @@ const publications = [
     year: 2020,
     citations: null,
     citationFile: "./citations/vmscatter.bib",
-    selected: true,
+    selected: false,
     image: "./Figure/VMscatter.png",
     area: ["Battery-Free & Sustainable IoT", "NextG Wireless & Networked Systems"],
     links: [
@@ -563,7 +563,7 @@ const publications = [
     year: 2020,
     citations: null,
     citationFile: "./citations/lscatter.bib",
-    selected: true,
+    selected: false,
     image: "./Figure/LScatter.png",
     area: ["Battery-Free & Sustainable IoT", "NextG Wireless & Networked Systems"],
   },
@@ -575,7 +575,7 @@ const publications = [
     year: 2019,
     citations: null,
     citationFile: "./citations/pic.bib",
-    selected: null,
+    selected: false,
     image: "./Figure/PIC.png",
     area: ["IoT, Edge Intelligence & CPS", "NextG Wireless & Networked Systems"],
     award: "Best Paper Award Candidate"
@@ -599,7 +599,7 @@ const publications = [
     year: 2018,
     citations: null,
     citationFile: "./citations/passivezigbee.bib",
-    selected: null,
+    selected: false,
     image: "./Figure/PassiveZigbee.png",
     area: ["Battery-Free & Sustainable IoT", "IoT, Edge Intelligence & CPS", "NextG Wireless & Networked Systems"],
     award: "Best Paper Runner-up Award"
