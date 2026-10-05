@@ -223,21 +223,21 @@ const students = [
 // Keep `citations` in sync with Google Scholar to drive ranking in filtered views.
 const publications = [
 
-  //   {
-  //   title: "BFMScan: Enabling Explicit Angle-Resolved Sensing via Beamforming Feedback Matrix",
-  //   href: "",
-  //   authors: "Bofan Li, Zhuoyuan Liu, Zhankai Ye, Weikuan Yu, Xin Liu",
-  //   venue: "ACM IMWUT/UbiComp 2026",
-  //   year: 2026,
-  //   citations: null,
-  //   citationFile: "",
-  //   selected: true,
-  //   image: "./Figure/BFMScan.png",
-  //   area: ["Multimodal Sensing & ISAC", "IoT, Edge Intelligence & CPS"],
-  //   links: [
-  //     { label: "Code / Dataset: to appear", href: "" }
-  //   ]
-  // },
+  {
+    title: "BFMScan: Enabling Explicit Angle-Resolved Sensing via Beamforming Feedback Matrix",
+    href: "https://doi.org/10.1145/3832009",
+    authors: "Bofan Li, Zhuoyuan Liu, Zhankai Ye, Weikuan Yu, Xin Liu",
+    venue: "ACM IMWUT/UbiComp 2026",
+    year: 2026,
+    citations: null,
+    citationFile: "./citations/bfmscan.bib",
+    selected: true,
+    image: "./Figure/BFMScan.png",
+    area: ["Multimodal Sensing & ISAC", "IoT, Edge Intelligence & CPS"],
+    links: [
+      { label: "Code / Dataset: to appear", href: "" }
+    ]
+  },
 
     {
     title: "MUGEN: A Unified Framework for Efficient Motion Understanding and Generation",
@@ -728,7 +728,7 @@ const researchMapPapers = [
   { id: "mural-fi", label: "MURAL-Fi", query: "mural-fi", primary: "smart-health", path: ["smart-health", "multimodal-learning", "wifi-sensing", "human-sensing"] },
   { id: "ear", label: "EAR", query: "ear:", primary: "smart-health", path: ["smart-health", "human-sensing", "heterogeneous-edge"] },
   { id: "hyperedit", label: "HyperEdit", query: "hyperedit", primary: "generative-ai", path: ["generative-ai"] },
-  { id: "bfmscan", label: "BFMScan", primary: "multimodal-learning", path: ["multimodal-learning", "wifi-sensing", "mmwave-beamforming"] },
+  { id: "bfmscan", label: "BFMScan", query: "bfmscan", primary: "multimodal-learning", path: ["multimodal-learning", "wifi-sensing", "mmwave-beamforming"] },
   { id: "energy-paging", label: "Energy Paging", query: "energy-efficient paging", primary: "mac-scheduling", path: ["mac-scheduling", "resource-allocation", "battery-free-hardware"] },
   { id: "chiron", label: "Chiron", query: "chiron", primary: "mac-scheduling", path: ["mac-scheduling", "spectrum-networking", "embedded-wearable"] },
   { id: "pic", label: "PIC", query: "parallel inclusive", primary: "heterogeneous-edge", path: ["heterogeneous-edge", "cross-technology-phy"] },
@@ -926,7 +926,6 @@ function getResearchPaperTitle(paper) {
 
 function getResearchPaperVenue(paper) {
   const manualVenues = {
-    bfmscan: "UbiComp '26",
     fresco: "ICCCN '26"
   };
 
