@@ -285,6 +285,18 @@
   line-height: 1.15;
 }
 
+.lab-hero-copy h1.lab-logo-title {
+  margin: 14px 0 20px;
+  line-height: 0;
+}
+
+.lab-logo-title img {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
+
 .lab-hero-copy p:not(.lab-kicker) {
   margin: 0;
   color: var(--accent-deep);
