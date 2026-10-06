@@ -235,9 +235,9 @@ const publications = [
     image: "./Figure/BFMScan.png",
     area: ["Multimodal Sensing & ISAC", "IoT, Edge Intelligence & CPS"],
     links: [
-      { label: "Code / Dataset", href: "https://github.com/xinliulab/26UbiComp_BFMScan" }
+      { label: "Code / Dataset", href: "https://github.com/xlstacklab/26UbiComp_BFMScan" }
     ],
-    patentHref: "https://github.com/xinliulab/26UbiComp_BFMScan#patent",
+    patentHref: "https://github.com/xlstacklab/26UbiComp_BFMScan#patent",
     patentLabel: "Patent Pending: U.S. Prov. 64/155,826"
   },
 
@@ -373,7 +373,7 @@ const publications = [
     image: "./Figure/0cal.png",
     area: ["Multimodal Sensing & ISAC", "NextG Wireless & Networked Systems", "IoT, Edge Intelligence & CPS"],
     links: [
-      { label: "Code / Dataset", href: "https://github.com/xinliulab/26SenSys_0cal" }
+      { label: "Code / Dataset", href: "https://github.com/xlstacklab/26SenSys_0cal" }
     ],
     patentHref: "https://patents.google.com/patent/WO2025235714A1/en"
   },
@@ -430,7 +430,7 @@ const publications = [
     image: "./Figure/ftp.png",
     area: ["NextG Wireless & Networked Systems", "IoT, Edge Intelligence & CPS"],
     links: [
-      { label: "Code / Dataset", href: "https://github.com/xinliulab/24InfoCom_FTP"}
+      { label: "Code / Dataset", href: "https://github.com/xlstacklab/24InfoCom_FTP"}
     ],
     patentHref: "https://patents.google.com/patent/WO2025235721A1/en"
   },
@@ -445,7 +445,7 @@ const publications = [
     image: "./Figure/effblue.png",
     area: ["Battery-Free & Sustainable IoT", "NextG Wireless & Networked Systems"]
     // links: [
-    //   { label: "Code / Dataset", href: "https://github.com/xinliulab/24InfoCom_FTP" }
+    //   { label: "Code / Dataset", href: "https://github.com/xlstacklab/24InfoCom_FTP" }
     // ]
   },
   {
@@ -459,7 +459,7 @@ const publications = [
     image: "./Figure/swift.png",
     area: ["NextG Wireless & Networked Systems", "IoT, Edge Intelligence & CPS"]
     // links: [
-    //   { label: "Code / Dataset", href: "https://github.com/xinliulab/24InfoCom_FTP"}
+    //   { label: "Code / Dataset", href: "https://github.com/xlstacklab/24InfoCom_FTP"}
     // ]
   },
   {
@@ -474,7 +474,7 @@ const publications = [
     image: "./Figure/LightThief.png",
     area: ["Trustworthy AI, Sensing & Security", "IoT, Edge Intelligence & CPS"],
     links: [
-      { label: "Code", href: "https://github.com/xinliulab/23Security_LightThief" },
+      { label: "Code", href: "https://github.com/xlstacklab/23Security_LightThief" },
       { label: "Presentation", href: "https://www.usenix.org/conference/usenixsecurity23/presentation/liu-xin" }
     ],
     patentHref: "https://patents.google.com/patent/WO2026089771A2/en"
