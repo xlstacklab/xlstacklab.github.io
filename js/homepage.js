@@ -238,7 +238,7 @@ const publications = [
       { label: "Code / Dataset", href: "https://github.com/xinliulab/26UbiComp_BFMScan" }
     ],
     patentHref: "https://github.com/xinliulab/26UbiComp_BFMScan#patent",
-    patentLabel: "Patent Pending: U.S. Prov. 63/944,170"
+    patentLabel: "Patent Pending: U.S. Prov. 64/155,826"
   },
 
     {
