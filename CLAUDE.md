@@ -1,7 +1,12 @@
 # CLAUDE.md
 
-Personal homepage for Xin Liu (FSU), published via GitHub Pages at
-https://xinliulab.github.io. Static site: `index.html`, `lab.html`,
+Personal homepage for Xin Liu (FSU) / XL-Stack Lab, published via GitHub Pages at
+https://xlstacklab.github.io from the repo `xlstacklab/xlstacklab.github.io`
+(organization `xlstacklab`). The local folder is still named
+`xinliulab.github.io`. The old address https://xinliulab.github.io is a separate
+redirect-only repo (`xinliulab/xinliulab.github.io`) that forwards every path to
+the new site; course sites such as https://xinliulab.github.io/FSU-COP4610-Operating-Systems/
+still live under the personal account. Static site: `index.html`, `lab.html`,
 `css/`, `js/` (all page content lives in the data arrays at the top of
 `js/homepage.js`).
 
