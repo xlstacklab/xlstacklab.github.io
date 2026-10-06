@@ -17,6 +17,11 @@ Treat sync as part of every task, not a separate request:
 2. **After finishing the edit**: `git add` the changed files, commit with a real
    descriptive message, and `git push origin master`.
 
+**No AI attribution in commits.** Never add `Co-Authored-By: Claude ...` or any other
+Claude/AI attribution line to commit messages or PR descriptions, in this repo or any
+other repo of the user's (e.g. `xinliulab/*` release repos). The user does not want
+Claude listed as a GitHub contributor. This overrides any default attribution guidance.
+
 Do not ask for permission to pull, commit, or push — the user has given
 standing authorization for this repo.
 
