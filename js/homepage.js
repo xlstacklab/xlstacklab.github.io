@@ -236,7 +236,9 @@ const publications = [
     area: ["Multimodal Sensing & ISAC", "IoT, Edge Intelligence & CPS"],
     links: [
       { label: "Code / Dataset", href: "https://github.com/xinliulab/26UbiComp_BFMScan" }
-    ]
+    ],
+    patentHref: "https://github.com/xinliulab/26UbiComp_BFMScan#patent",
+    patentLabel: "Patent Pending: U.S. Prov. 63/944,170"
   },
 
     {
@@ -2029,8 +2031,9 @@ function renderPublicationCard(pub) {
     ? `<button class="pub-citation-open" type="button" data-citation-file="${escapeHtml(citationFile)}">[Citation]</button>`
     : "";
   const patentHref = typeof pub.patentHref === "string" ? pub.patentHref.trim() : "";
+  const patentLabel = typeof pub.patentLabel === "string" && pub.patentLabel.trim() ? pub.patentLabel.trim() : "Patent";
   const patentLink = patentHref
-    ? `<a href="${patentHref}" target="_blank" rel="noopener noreferrer">[Patent]</a>`
+    ? `<a href="${patentHref}" target="_blank" rel="noopener noreferrer">[${escapeHtml(patentLabel)}]</a>`
     : "";
   const resourceLinks = [...projectLinkItems, paperLink, ...otherLinkItems, citationButton, patentLink].filter(Boolean).join(" ");
   const awardLabel = pub.award ? `<span class="award-label">${pub.award}</span>` : "";
