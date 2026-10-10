@@ -156,6 +156,12 @@ const teachingItems = [
   }
 ];
 
+const serviceLines = [
+  { label: "TPC", venues: "HPC Asia'27, ICPADS'25" },
+  { label: "Reviewer", venues: "ICLR'27, CSUR'26, ToN'21–22/'26, TWC'24/'26, TMC'25, TIFS'24, Ad Hoc'23, WCL'21, Access" },
+  { label: "AEC", venues: "MobiCom'26, S&P'26, SIGCOMM'22–23" }
+];
+
 const students = [
   {
     name: "Yihao Huang",
@@ -1767,6 +1773,17 @@ function renderTeaching() {
     .join("");
 }
 
+function renderService() {
+  const container = document.getElementById("service-list");
+  if (!container) {
+    return;
+  }
+
+  container.innerHTML = serviceLines
+    .map((line) => `<p class="service-line"><strong>${escapeHtml(line.label)}:</strong> ${escapeHtml(line.venues)}</p>`)
+    .join("");
+}
+
 function renderStudents() {
   const container = document.getElementById("student-list");
   if (!container) {
@@ -2378,6 +2395,7 @@ async function init() {
   renderNews();
   setupNewsImageViewer();
   renderTeaching();
+  renderService();
   renderStudents();
   buildFilters();
   buildAreaNav();

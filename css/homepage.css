@@ -1899,6 +1899,16 @@ a {
   font-weight: 700;
 }
 
+.service-list {
+  display: grid;
+  gap: 4px;
+}
+
+.service-line {
+  margin: 0;
+  color: var(--ink);
+}
+
 .student-list {
   --student-name-width: max-content;
   --student-role-width: max-content;
