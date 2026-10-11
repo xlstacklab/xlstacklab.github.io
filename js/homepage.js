@@ -248,15 +248,14 @@ const publications = [
     title: "TraceQuery: Learning What to Recompute from Full-Denoising Trajectory in Diffusion Language Models",
     href: "", // add the arXiv link once it is posted
     authors: "Yukai Jin, Zhankai Ye, Jiayue Yang, Fangyi Li, Shuoqiu Li, Xu Gao, Shibo Li, Xin Liu, Shangqian Gao",
-    venue: "Preprint 2026",
-    preprint: true,
+    venue: "arXiv 2026",
     year: 2026,
     citations: null,
     citationFile: "",
     selected: false,
     area: ["Foundation Models & Generative AI"],
     links: [
-      { label: "Code", href: "https://github.com/fish1928/tracequery" }
+      { label: "Code / Dataset", href: "https://github.com/fish1928/tracequery" }
     ]
   },
 
@@ -2069,9 +2068,12 @@ function renderPublicationCard(pub) {
     .filter(({ link }) => linkOrder(link.label) !== 0)
     .map(({ link }) => renderPubLink(link));
 
+  // An explicitly empty `href` marks a paper whose link is not out yet: show a placeholder.
   const paperLink = paperHref
     ? `<a href="${paperHref}" target="_blank" rel="noopener noreferrer">[Paper]</a>`
-    : "";
+    : pub.href === ""
+      ? `<span class="pub-link-placeholder">[Paper]</span>`
+      : "";
 
   const badges = (pub.badges || [])
     .map((badgePath) => `<img src="${badgePath}" alt="Research artifact badge">`)
