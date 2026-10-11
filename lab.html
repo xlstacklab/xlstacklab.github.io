@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/homepage.css?v=20261010-service4">
-  <link rel="stylesheet" href="css/lab.css?v=20261006-lab-logo">
+  <link rel="stylesheet" href="css/lab.css?v=20261011-tree5">
 </head>
 <body class="lab-page">
   <div class="site-shell">
@@ -95,14 +95,20 @@
             NextG wireless networks, edge intelligence, and foundation models for Physical AI.
           </p>
           <div class="lab-hero-actions">
+            <a href="#projects">Projects</a>
             <a href="#people">People</a>
+            <a href="#grants">Grants</a>
           </div>
         </div>
       </header>
 
-      <section class="panel lab-focus-panel">
+      <section id="projects" class="panel lab-focus-panel">
         <div class="panel-head">
           <h2>What We Work On</h2>
+        </div>
+        <div class="stack-tree-wrap">
+          <p class="stack-tree-intro">One stack, from integrated sensing and communication up to foundation models for Physical AI. Select a person to see their work.</p>
+          <div class="stack-tree" id="stack-tree"></div>
         </div>
         <div class="focus-grid">
           <article>
@@ -145,16 +151,16 @@
             </div>
           </article>
           <article class="person-card">
-            <div class="person-initials">YJ</div>
+            <div class="person-initials">ZL</div>
             <div class="person-copy">
-              <h3>Yukai Jin</h3>
+              <h3>Zhuoyuan Liu</h3>
               <p class="person-line"><span class="person-meta">Ph.D., 2025 - now</span></p>
             </div>
           </article>
           <article class="person-card">
-            <div class="person-initials">ZL</div>
+            <div class="person-initials">YJ</div>
             <div class="person-copy">
-              <h3>Zhuoyuan Liu</h3>
+              <h3>Yukai Jin</h3>
               <p class="person-line"><span class="person-meta">Ph.D., 2025 - now</span></p>
             </div>
           </article>
@@ -166,7 +172,7 @@
               <h3><a href="https://jye16.github.io" target="_blank" rel="noopener noreferrer">Zhankai Ye</a></h3>
               <p class="person-line">
                 <span class="person-meta">Ph.D., 2022 - now</span>
-                <span class="person-work">EMNLP'26, <a href="https://doi.org/10.1109/FG67764.2026.11557074" target="_blank" rel="noopener noreferrer">FG'26</a></span>
+                <span class="person-work">AXIS (<a href="https://arxiv.org/abs/2610.11005" target="_blank" rel="noopener noreferrer">arXiv'26</a>), MUGEN (<a href="https://arxiv.org/abs/2607.27581" target="_blank" rel="noopener noreferrer">arXiv'26</a>), GeoMotionGPT (<a href="https://arxiv.org/abs/2601.07632" target="_blank" rel="noopener noreferrer">EMNLP'26</a>), ARiSE (<a href="https://doi.org/10.1109/FG67764.2026.11557074" target="_blank" rel="noopener noreferrer">FG'26</a>)</span>
               </p>
             </div>
           </article>
@@ -186,12 +192,67 @@
               <h3><a href="https://bofan1120.github.io/" target="_blank" rel="noopener noreferrer">Bofan Li</a></h3>
               <p class="person-line">
                 <span class="person-meta">Ph.D., 2022 - 2026</span>
-                <span class="person-work"><a href="https://doi.org/10.1145/3832009" target="_blank" rel="noopener noreferrer">UbiComp'26 Issue 3</a>, <a href="https://doi.org/10.1109/SP63933.2026.00087" target="_blank" rel="noopener noreferrer">S&amp;P'26</a>, <a href="https://doi.org/10.1145/3790111" target="_blank" rel="noopener noreferrer">UbiComp'26 Issue 1</a></span>
+                <span class="person-work">BFMScan (<a href="https://doi.org/10.1145/3832009" target="_blank" rel="noopener noreferrer">UbiComp'26 Issue 3</a>), 2FiA (<a href="https://doi.org/10.1109/SP63933.2026.00087" target="_blank" rel="noopener noreferrer">S&amp;P'26</a>), MURAL-Fi (<a href="https://doi.org/10.1145/3790111" target="_blank" rel="noopener noreferrer">UbiComp'26 Issue 1</a>)</span>
               </p>
               <p class="person-position"><a href="https://labs.engineering.asu.edu/cnsg/" target="_blank" rel="noopener noreferrer">Postdoctoral Scholar, Arizona State University</a></p>
             </div>
           </article>
         </div>
+      </section>
+
+      <section id="undergraduates" class="panel">
+        <div class="panel-head">
+          <h2>Undergraduate Researchers</h2>
+        </div>
+        <div class="undergrad-list">
+          <div class="undergrad-group">
+            <h3 class="undergrad-program">Intern</h3>
+            <ul class="undergrad-items">
+              <li><span class="undergrad-name">Carson Cary</span> <span class="undergrad-meta">CS, 2026&ndash;27</span><span class="undergrad-topic">Efficient LLMs: mixture-of-experts (MoE) compression and diffusion large language models (under review)</span></li>
+            </ul>
+          </div>
+          <div class="undergrad-group">
+            <h3 class="undergrad-program">UROP</h3>
+            <ul class="undergrad-items">
+              <li><span class="undergrad-name">Finnegan Bzura</span> <span class="undergrad-meta">CS, 2026&ndash;27</span><span class="undergrad-topic">Privacy-preserving edge AI for demolition-site monitoring</span></li>
+              <li><span class="undergrad-name">Chloe Kho</span> <span class="undergrad-meta">Statistics, 2026&ndash;27</span><span class="undergrad-topic">Detecting and filtering sensitive data in demolition-site video datasets</span></li>
+              <li><span class="undergrad-name">Andy Gonzalez</span> <span class="undergrad-meta">CS, 2024&ndash;25</span><span class="undergrad-topic">Bringing Large Language Models to Wireless Sensing (<a href="https://cre.fsu.edu/research-symposium/18531">FSU URS 2025</a>)</span></li>
+            </ul>
+          </div>
+          <div class="undergrad-group">
+            <h3 class="undergrad-program">ERP</h3>
+            <ul class="undergrad-items">
+              <li><span class="undergrad-name">Shixian Sheng</span> <span class="undergrad-meta">CS, 2025</span><span class="undergrad-topic">Blockchain-based security for AI agent protocols (under review)</span></li>
+              <li><span class="undergrad-name">Liangyu Chen</span> <span class="undergrad-meta">EE, 2024&ndash;25</span></li>
+            </ul>
+          </div>
+          <div class="undergrad-group">
+            <h3 class="undergrad-program">Other</h3>
+            <ul class="undergrad-items">
+              <li><span class="undergrad-name">Dylan Mathews</span> <span class="undergrad-meta">CS, 2026&ndash;</span><span class="undergrad-topic">AI agent reliability: how agents' confidence shifts after failures</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="grants" class="panel">
+        <div class="panel-head">
+          <h2>Grants</h2>
+        </div>
+        <ul class="grant-list">
+          <li>
+            <span class="grant-title">Enabling Automated, Privacy-Preserving Data Acquisition from Demolition Sites to Improve the Operational Efficiency of Demolition Equipment Using Computer Vision and Edge Computing</span>
+            <span class="grant-meta">FSU CRC Seed Grant &middot; Co-PI (PI: Juyeong Choi) &middot; $50,000 &middot; 2026&ndash;2028</span>
+          </li>
+          <li>
+            <span class="grant-title">Cloud-Native Wireless Radiance Fields for Scalable Channel Rendering</span>
+            <span class="grant-meta">FSU/AWS Research Acceleration Fund &middot; PI &middot; $20,000 in AWS credits &middot; 2026</span>
+          </li>
+          <li>
+            <span class="grant-title">FSU CRC First Year Assistant Professor (FYAP) Grant</span>
+            <span class="grant-meta">PI &middot; 2025&ndash;2027</span>
+          </li>
+        </ul>
       </section>
 
     </main>
@@ -250,6 +311,143 @@
         closePhotoModal();
       }
     });
+  </script>
+  <script>
+    // XL-Stack tree. Layers are the four directions in the lab tagline, listed top to bottom; keep them broad.
+    // Each member is a branch on one layer. Clicking a branch pops up that member's card from the People or
+    // Alumni section; clicking the pop-up scrolls to the card. To add a member, add their person card below
+    // and one line here (the name must match the card's name).
+    const STACK_LAYERS = [
+      { id: "fm", name: "Foundation Models for Physical AI" },
+      { id: "edge", name: "Edge Intelligence" },
+      { id: "net", name: "NextG Wireless Networks" },
+      { id: "isac", name: "Integrated Sensing and Communication" },
+    ];
+
+    const STACK_PEOPLE = [
+      { name: "Yukai Jin", layer: "fm" },
+      { name: "Zhankai Ye", layer: "edge" },
+      { name: "Yihao Huang", layer: "net" },
+      { name: "Bofan Li", layer: "isac", alumni: true },
+      { name: "Zhuoyuan Liu", layer: "isac" },
+    ];
+
+    (() => {
+      const wrap = document.querySelector(".stack-tree-wrap");
+      const tree = document.getElementById("stack-tree");
+      if (!wrap || !tree) {
+        return;
+      }
+
+      const cards = new Map();
+      document.querySelectorAll(".person-card").forEach((card) => {
+        const name = card.querySelector("h3")?.textContent.trim();
+        if (name) cards.set(name, card);
+      });
+
+      const el = (tag, className, text) => {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text) node.textContent = text;
+        return node;
+      };
+
+      const popover = el("div", "stack-popover");
+      popover.hidden = true;
+      popover.tabIndex = 0;
+      popover.setAttribute("role", "button");
+      wrap.append(popover);
+      let current = null;
+
+      const close = () => {
+        popover.hidden = true;
+        current?.button.setAttribute("aria-expanded", "false");
+        current = null;
+      };
+
+      const jump = () => {
+        const card = current && cards.get(current.person.name);
+        close();
+        if (!card) {
+          return;
+        }
+        card.scrollIntoView({ behavior: "smooth", block: "center" });
+        card.classList.remove("is-highlight");
+        void card.offsetWidth; // restart the highlight animation
+        card.classList.add("is-highlight");
+      };
+
+      const open = (person, button) => {
+        if (current?.button === button) {
+          close();
+          return;
+        }
+        close();
+        const card = cards.get(person.name);
+        if (!card) {
+          return;
+        }
+        const copy = card.cloneNode(true);
+        copy.classList.remove("is-highlight");
+        popover.replaceChildren(copy);
+        popover.setAttribute("aria-label", `Go to ${person.name}`);
+        popover.hidden = false;
+        const box = wrap.getBoundingClientRect();
+        const anchor = button.getBoundingClientRect();
+        const width = popover.offsetWidth;
+        const left = Math.min(Math.max(anchor.left - box.left + anchor.width / 2 - width / 2, 0), box.width - width);
+        popover.style.left = `${left}px`;
+        popover.style.top = `${anchor.bottom - box.top + 8}px`;
+        button.setAttribute("aria-expanded", "true");
+        current = { person, button };
+      };
+
+      popover.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          return; // links inside the card still open normally
+        }
+        jump();
+      });
+      popover.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          jump();
+        }
+      });
+      document.addEventListener("click", (event) => {
+        if (current && !popover.contains(event.target) && !event.target.closest(".stack-person")) {
+          close();
+        }
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && current) {
+          close();
+        }
+      });
+
+      STACK_LAYERS.forEach((layer, i) => {
+        const row = el("div", "stack-row");
+        const left = el("div", "stack-branch stack-branch-left");
+        const right = el("div", "stack-branch stack-branch-right");
+        const trunk = el("div", "stack-trunk");
+        trunk.append(el("span", "stack-layer-name", layer.name));
+        STACK_PEOPLE.filter((p) => p.layer === layer.id).forEach((person, k) => {
+          const card = cards.get(person.name);
+          const button = el("button", `stack-person${person.alumni ? " is-alumni" : ""}`);
+          button.type = "button";
+          button.setAttribute("aria-expanded", "false");
+          const photo = card?.querySelector(".person-photo-link img, .person-card > img");
+          const avatar = photo
+            ? Object.assign(el("img", "stack-avatar"), { src: photo.getAttribute("src"), alt: "" })
+            : el("span", "stack-avatar stack-initials", card?.querySelector(".person-initials")?.textContent.trim() || "");
+          button.append(avatar, el("span", "stack-person-name", person.name));
+          button.addEventListener("click", () => open(person, button));
+          ((i + k) % 2 === 0 ? right : left).append(button); // branches alternate sides going up the trunk
+        });
+        row.append(left, trunk, right);
+        tree.append(row);
+      });
+    })();
   </script>
 </body>
 </html>

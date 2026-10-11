@@ -228,6 +228,22 @@ const students = [
 
 // Keep `citations` in sync with Google Scholar to drive ranking in filtered views.
 const publications = [
+    {
+    title: "How Narrative Wrapping Affects LLM Refusal: A Cross-Language Benchmark and Defense",
+    href: "https://arxiv.org/abs/2610.11005",
+    authors: "Zhankai Ye, Yanning Wang, Yukai Jin, Bo Mei, Fangyi Li, Wei Wang, Shangqian Gao, Xin Liu",
+    venue: "arXiv 2026",
+    year: 2026,
+    citations: null,
+    citationFile: "",
+    selected: false,
+    image: "./Figure/axis.png",
+    area: ["Trustworthy AI, Sensing & Security", "Foundation Models & Generative AI"],
+    links: [
+      { label: "Code / Dataset", href: "" } // placeholder until the code is released
+    ]
+  },
+
 
   {
     title: "BFMScan: Enabling Explicit Angle-Resolved Sensing via Beamforming Feedback Matrix",
@@ -845,7 +861,7 @@ function getAreas(pub) {
   return Array.isArray(pub.area) ? pub.area : [pub.area];
 }
 
-// Preprints (arXiv) always sort after published work, in every view.
+// Preprints (arXiv) sort after published work in every view except "All", which is purely newest first.
 function isPreprint(pub) {
   return pub.preprint === true || /^arxiv\b/i.test(String(pub.venue || "").trim());
 }
@@ -854,9 +870,9 @@ function preprintDelta(a, b) {
   return Number(isPreprint(a)) - Number(isPreprint(b));
 }
 
-function sortByYearDesc(items) {
+function sortByYearDesc(items, { preprintsLast = true } = {}) {
   return [...items].sort((a, b) => {
-    const preprintOrder = preprintDelta(a, b);
+    const preprintOrder = preprintsLast ? preprintDelta(a, b) : 0;
     if (preprintOrder !== 0) {
       return preprintOrder;
     }
@@ -1941,7 +1957,7 @@ function setActiveArea(area) {
 function renderPublications() {
   const groupedContainer = document.getElementById("publication-groups");
   const resultMeta = document.getElementById("pub-result-meta");
-  const yearSortedPubs = sortByYearDesc(publications);
+  const yearSortedPubs = sortByYearDesc(publications, { preprintsLast: activeArea !== "All" });
   const filteredPubs = yearSortedPubs.filter((pub) => {
     if (activeArea === "All") {
       return true;

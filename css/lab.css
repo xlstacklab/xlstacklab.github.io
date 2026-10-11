@@ -327,7 +327,8 @@
   text-decoration: none;
 }
 
-.lab-hero-actions a:nth-child(2) {
+/* The hero links are peer section shortcuts, so they share one outline style; hover fills them. */
+.lab-hero-actions a {
   background: #ffffff;
   color: var(--accent-deep);
 }
@@ -337,6 +338,228 @@
   background: var(--accent-strong);
   color: #ffffff;
   text-decoration: none;
+}
+
+/* XL-Stack tree: the layers form the trunk (models on top, channels at the root);
+   each member is a branch off their layer, alternating sides going up. */
+.stack-tree-wrap {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.stack-tree-intro {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.stack-tree {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.stack-tree::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 50%;
+  width: 12px;
+  border-radius: 6px;
+  background: linear-gradient(#2f3e56, #6b81a6);
+  transform: translateX(-50%);
+}
+
+.stack-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px) minmax(0, 1fr);
+  align-items: center;
+}
+
+.stack-row:nth-child(1) { --trunk: #2f3e56; }
+.stack-row:nth-child(2) { --trunk: #37496a; }
+.stack-row:nth-child(3) { --trunk: #425c85; }
+.stack-row:nth-child(4) { --trunk: #546d97; }
+.stack-row:nth-child(5) { --trunk: #627aa1; }
+
+.stack-trunk {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 2px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--trunk);
+  color: #ffffff;
+  text-align: center;
+}
+
+.stack-layer-name {
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.stack-branch {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.stack-branch-left {
+  justify-content: flex-end;
+  padding-right: 18px;
+}
+
+.stack-branch-right {
+  justify-content: flex-start;
+  padding-left: 18px;
+}
+
+.stack-branch:not(:empty)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  height: 2px;
+  background: var(--line);
+}
+
+.stack-branch-left::before {
+  right: 0;
+}
+
+.stack-branch-right::before {
+  left: 0;
+}
+
+.stack-person {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px 4px 4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.stack-person:hover,
+.stack-person[aria-pressed="true"] {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+.stack-person:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Alumni stay on their layer, shown a little lighter instead of with a label. */
+.stack-person.is-alumni {
+  opacity: 0.72;
+}
+
+.stack-person.is-alumni:hover,
+.stack-person.is-alumni[aria-pressed="true"] {
+  opacity: 1;
+}
+
+.stack-avatar {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.stack-initials {
+  display: inline-grid;
+  place-items: center;
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.stack-popover {
+  position: absolute;
+  z-index: 20;
+  width: min(380px, 100%);
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel-bg);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.stack-popover:hover,
+.stack-popover:focus-visible {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.stack-popover .person-card {
+  margin: 0;
+}
+
+/* Flash on the real card after jumping to it from the stack. */
+.person-card.is-highlight {
+  animation: stack-card-flash 1.8s ease-out;
+}
+
+@keyframes stack-card-flash {
+  0%, 40% {
+    box-shadow: 0 0 0 3px var(--accent);
+  }
+  100% {
+    box-shadow: 0 0 0 3px transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .person-card.is-highlight {
+    animation: none;
+    box-shadow: 0 0 0 3px var(--accent);
+  }
+}
+
+@media (max-width: 720px) {
+  .stack-tree::before {
+    left: 12px;
+    transform: none;
+  }
+
+  .stack-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 6px;
+    padding-left: 32px;
+  }
+
+  .stack-trunk {
+    text-align: left;
+  }
+
+  .stack-branch-left,
+  .stack-branch-right {
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  .stack-branch-left {
+    order: 2;
+  }
+
+  .stack-branch::before {
+    display: none;
+  }
 }
 
 .focus-grid {
@@ -557,4 +780,87 @@
     width: 74px;
     height: 74px;
   }
+}
+
+.undergrad-list {
+  display: grid;
+  gap: 14px;
+}
+
+.undergrad-program {
+  margin: 0 0 4px;
+  color: var(--accent-deep);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.undergrad-items,
+.grant-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+/* Same three columns in every group so names, majors/years and topics line up across the section. */
+.undergrad-items li {
+  display: grid;
+  grid-template-columns: 9.5rem 9rem minmax(0, 1fr);
+  align-items: baseline;
+  column-gap: 12px;
+  line-height: 1.4;
+}
+
+.undergrad-name {
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.undergrad-meta {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.undergrad-topic {
+  color: #3b4b63;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .undergrad-items li {
+    grid-template-columns: auto minmax(0, 1fr);
+    row-gap: 2px;
+  }
+
+  .undergrad-topic {
+    grid-column: 1 / -1;
+  }
+}
+
+.grant-list {
+  gap: 12px;
+}
+
+.grant-list li {
+  display: grid;
+  gap: 2px;
+  padding-left: 12px;
+  border-left: 3px solid var(--accent);
+  line-height: 1.4;
+}
+
+.grant-title {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.grant-meta {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 600;
 }
