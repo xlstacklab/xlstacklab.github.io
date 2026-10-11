@@ -244,6 +244,22 @@ const publications = [
     ]
   },
 
+  {
+    title: "TraceQuery: Learning What to Recompute from Full-Denoising Trajectory in Diffusion Language Models",
+    href: "", // add the arXiv link once it is posted
+    authors: "Yukai Jin, Zhankai Ye, Jiayue Yang, Fangyi Li, Shuoqiu Li, Xu Gao, Shibo Li, Xin Liu, Shangqian Gao",
+    venue: "Preprint 2026",
+    preprint: true,
+    year: 2026,
+    citations: null,
+    citationFile: "",
+    selected: false,
+    area: ["Foundation Models & Generative AI"],
+    links: [
+      { label: "Code", href: "https://github.com/fish1928/tracequery" }
+    ]
+  },
+
 
   {
     title: "BFMScan: Enabling Explicit Angle-Resolved Sensing via Beamforming Feedback Matrix",
