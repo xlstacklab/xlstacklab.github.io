@@ -932,7 +932,8 @@ function underlineStudentAuthors(authors) {
   return authors
     .replace(/\bZhankai Ye\b/g, '<u>Zhankai Ye</u>')
     .replace(/\bBofan Li\b/g, '<u>Bofan Li</u>')
-    .replace(/\bZhuoyuan Liu\b/g, '<u>Zhuoyuan Liu</u>');
+    .replace(/\bZhuoyuan Liu\b/g, '<u>Zhuoyuan Liu</u>')
+    .replace(/\bYukai Jin\b/g, '<u>Yukai Jin</u>');
 }
 
 function formatPublicationAuthors(authors) {
