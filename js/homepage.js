@@ -253,6 +253,7 @@ const publications = [
     citations: null,
     citationFile: "",
     selected: false,
+    image: "./Figure/tracequery.png",
     area: ["Foundation Models & Generative AI"],
     links: [
       { label: "Code / Dataset", href: "https://github.com/fish1928/tracequery" }
