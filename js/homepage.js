@@ -235,12 +235,13 @@ const publications = [
     venue: "arXiv 2026",
     year: 2026,
     citations: null,
-    citationFile: "",
+    citationFile: "./citations/guise.bib",
     selected: false,
-    image: "./Figure/axis.png",
+    image: "./Figure/guise.png",
     area: ["Trustworthy AI, Sensing & Security", "Foundation Models & Generative AI"],
     links: [
-      { label: "Code / Dataset", href: "" } // placeholder until the code is released
+      { label: "Project Page", href: "https://jye16.github.io/guise/" },
+      { label: "Code / Dataset", href: "https://github.com/JYe16/GUISE_Official" }
     ]
   },
 
