@@ -241,7 +241,8 @@ const publications = [
     area: ["Trustworthy AI, Sensing & Security", "Foundation Models & Generative AI"],
     links: [
       { label: "Project Page", href: "https://jye16.github.io/guise/" },
-      { label: "Code / Dataset", href: "https://github.com/JYe16/GUISE_Official" }
+      { label: "Code", href: "https://github.com/JYe16/GUISE_Official" },
+      { label: "Dataset", href: "https://huggingface.co/datasets/xl-stack-lab/GUISE" }
     ]
   },
 
