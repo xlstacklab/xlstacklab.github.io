@@ -228,6 +228,9 @@ const students = [
 
 // Keep `citations` in sync with Google Scholar to drive ranking in filtered views.
 const publications = [
+  // The arXiv preprints below are under double-blind review, so they stay off
+  // the site for now. Uncomment each entry once its decision is out.
+  /*
     {
     title: "How Narrative Wrapping Affects LLM Refusal: A Cross-Language Benchmark and Defense",
     href: "https://arxiv.org/abs/2610.11005",
@@ -261,7 +264,7 @@ const publications = [
       { label: "Code / Dataset", href: "https://github.com/fish1928/tracequery" }
     ]
   },
-
+  */
 
   {
     title: "BFMScan: Enabling Explicit Angle-Resolved Sensing via Beamforming Feedback Matrix",
@@ -281,6 +284,8 @@ const publications = [
     patentLabel: "Patent Pending: U.S. Prov. 64/155,826"
   },
 
+  // Under double-blind review — hidden for now (see the note above).
+  /*
     {
     title: "MUGEN: A Unified Framework for Efficient Motion Understanding and Generation",
     href: "./publication/26arxiv_mugen.pdf",
@@ -296,6 +301,7 @@ const publications = [
       { label: "Project Page", href: "https://jye16.github.io/mugen-page/" }
     ]
   },
+  */
 
     {
     title: "GeoMotionGPT: Geometry-Aligned Motion Understanding with Large Language Models",
@@ -758,7 +764,8 @@ const researchMapLayers = [
 ];
 
 const researchMapPapers = [
-  { id: "mugen", label: "MUGEN", query: "mugen", primary: "physical-ai", path: ["physical-ai", "generative-ai", "motion-intelligence"] },
+  // MUGEN is under double-blind review; restore this node once the decision is out.
+  // { id: "mugen", label: "MUGEN", query: "mugen", primary: "physical-ai", path: ["physical-ai", "generative-ai", "motion-intelligence"] },
   { id: "geomotiongpt", label: "GeoMotionGPT", query: "geomotiongpt", primary: "physical-ai", path: ["physical-ai", "generative-ai", "motion-intelligence"] },
   { id: "arise", label: "ARiSE", query: "arise", primary: "physical-ai", path: ["physical-ai", "edge-ai", "human-sensing", "embedded-wearable"] },
   { id: "2fia", label: "2FiA", query: "2fia", primary: "cyber-physical-security", path: ["cyber-physical-security", "multimodal-learning", "wifi-sensing", "waveforms-channels"] },
@@ -1098,7 +1105,7 @@ function getResearchPaperScore(paper) {
 }
 
 const researchPaperClusters = {
-  ai: ["mugen", "geomotiongpt", "arise", "hyperedit"],
+  ai: ["geomotiongpt", "arise", "hyperedit"], // "mugen" removed while under double-blind review
   security: ["2fia", "lightthief", "invisible-light", "key-establishment", "tactical-iot", "fresco", "cross-jamming"],
   sensing: ["mural-fi", "ear", "bfmscan", "ojrc", "aegis"],
   edge: ["energy-paging", "chiron", "pic", "crf", "wifi-zigbee", "ect"],
