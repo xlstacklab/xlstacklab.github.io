@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-12T17:53:03.264Z",
+  "updatedAt": "2026-10-19T15:34:56.437Z",
   "source": "https://scholar.google.com/citations?user=w-GyGM4AAAAJ&hl=en&pagesize=100&view_op=list_works&sortby=pubdate",
   "papers": {
     "BFMScan: Enabling Explicit Angle-Resolved Sensing via Beamforming Feedback Matrix": 0,
     "MUGEN: A Unified Framework for Efficient Motion Understanding and Generation": 0,
     "HyperEdit: Unlocking Instruction-based Text Editing in LLMs via Hypernetworks": 4,
     "ARiSE: Efficient Mesh-Based Action Recognition from Wi-Fi Sensing on Edge Devices": 1,
-    "2FiA: Towards WiFi Sensing-Based Authentication with Unique Biometrics": 2,
+    "2FiA: Towards WiFi Sensing-Based Authentication with Unique Biometrics": 3,
     "HydroChirp: Dynamic Chirp Shaping for Reliable and Ultra-Long-Range Underwater Communication": 0,
     "0cal: Zero-Cost Calibration for mmWave Networks": 0,
     "Passive optical-to-RF conversion for secure eavesdropping on optical wireless communication systems": 0,
@@ -24,7 +24,7 @@
     "Simultaneous data dissemination among WiFi and ZigBee devices": 20,
     "LightThief: Your Optical Communication Information is Stolen behind the Wall": 22,
     "A secured protocol for iot devices in tactical networks": 13,
-    "I can see the light: Attacks on autonomous vehicles using invisible lights": 138,
+    "I can see the light: Attacks on autonomous vehicles using invisible lights": 137,
     "Exploiting wifi ap for simultaneous data dissemination among wifi and zigbee devices": 14,
     "Coexistent routing and flooding using WiFi packets in heterogeneous IoT network": 11,
     "Verification and Redesign of OFDM Backscatter": 93,
