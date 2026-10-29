@@ -2428,8 +2428,12 @@ function setupNavHighlight() {
 }
 
 function setupAudioButton() {
+  // The pronunciation button is commented out ("Bruce" covers it); keep this a no-op then.
   const button = document.getElementById("play-name");
   const audio = document.getElementById("name-audio");
+  if (!button || !audio) {
+    return;
+  }
   button.addEventListener("click", () => {
     audio.currentTime = 0;
     audio.play();
